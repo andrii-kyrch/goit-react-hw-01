@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import viteLogo from '/vite.svg';
 import './App.css';
 import Profile from './Profile/Profile';
 import userData from '../assets/userData.json';
+import FriendList from './FriendList/FriendList';
+import friends from '../assets/friends.json';
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
         image={userData.avatar}
         stats={userData.stats}
       />
+      <FriendList friends={friends} />
     </>
   );
 }

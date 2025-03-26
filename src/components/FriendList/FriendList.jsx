@@ -1,18 +1,22 @@
-import './FriendList.module.css';
+import css from './FriendList.module.css';
 import FriendListItem from '../FriendListItem/FriendListItem';
 
 const FriendList = ({ friends }) => {
   return (
-    <ul>
-      {friends.map(friend => (
-        <FriendListItem
-          key={friend.id}
-          avatar={friend.avatar}
-          name={friend.name}
-          isOnline={friend.isOnline}
-        />
-      ))}
-    </ul>
+    <section className={css.friendList}>
+      <div className="container">
+        <ul className={css.itemList}>
+          {friends.map(friend => (
+            <FriendListItem
+              key={friend.id}
+              avatar={friend.avatar}
+              name={friend.name}
+              isOnline={friend.isOnline}
+            />
+          ))}
+        </ul>
+      </div>
+    </section>
   );
 };
 

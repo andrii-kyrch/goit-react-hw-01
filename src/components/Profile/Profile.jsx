@@ -2,10 +2,10 @@ import css from './Profile.module.css';
 
 const Profile = ({ name, tag, location, image, stats }) => {
   return (
-    <section>
+    <section className={css.profile}>
       <div className="container">
         <div className={css.content}>
-          <div className={css.profile}>
+          <div className={css.profileName}>
             <img
               className={css.avatar}
               width="100"
